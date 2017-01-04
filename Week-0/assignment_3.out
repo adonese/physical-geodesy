@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{Problem title}{}% 1
+\BOOKMARK [1][-]{section.2}{The Name of You Section Goes Here}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Some Sub-Section}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Blah Blah Blah}{subsection.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Ordered and Unordered lists in LaTeX}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.3}{Equations and Math modes}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.4}{Arrays}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.5}{Working with Tables and Figures}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.6}{Using Syntax Highlighting}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Collaboration}{}% 10
