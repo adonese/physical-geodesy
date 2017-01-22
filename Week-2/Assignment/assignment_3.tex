@@ -1,0 +1,149 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{hyperref} % For links hyper reference?
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{graphicx} % It used for working with graphics. It helps you to include png images into your LaTeX.
+\usepackage{minted} % It is used for syntax highlighting, it is bit harder than listings package, you need to have python installed in your system, and you also need to install pygments. If it doesn't work for you try and replace it with listings package.
+%\usepackage{listings}
+\graphicspath{./Figures} % We are adding the figure's path to our path so that we don't need to write Figure/figure_name.ext in our figure? Does that make sense to you?
+
+\usepackage{sectsty} % Allows customizing section commands
+
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\usepackage{booktabs} % It allows to use books tables. A cool tables
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{University of Khartoum, Engineering} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Assignment 2 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Mohamed Yousif} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section*{Notes}
+This assignment will be about Newoton's Theory and field theory. Very important theories in physical geodesy. While the programming problems in this assignment will be fairly easy, the theoretical problems are not that easy. In both cases, if you start earlier, you will easily pass the assignment.
+
+
+\section{Programming Problems}
+\subsection{Problem 1, Norm of a vector}
+The norm of a vector, denoted by $\left \Vert \cdot \right \Vert $. The norm of a vector computes the length of that vector. In notations it is as simple as this 
+\begin{equation}
+\left \Vert A \right \Vert = \sqrt[p]{\sum_{i=1}^{n} a_i^p},
+\end{equation}
+where $p$ is the dimension of the vector. a's are the components of vector $A$ on each dimension $i$. Notice that this is a generic represent of the norm. There are a few types of norm that are used very often.
+
+\begin{table}
+	\centering
+	\caption{Popular norms}
+	\label{table:norm}
+	\begin{tabular}{@{}lll@{}}
+		\toprule
+		$p$ & notation & equation\\
+		\midrule
+		1 & $\left \Vert A \right \Vert_1 $ & $A = |a_1| + |a_2| .. |a_n|$\\
+		2 & $\left \Vert A \right \Vert_2 $ & $ A = \sqrt{(a_1^2 + a_2^2 ... a_n^2)}$\\
+		p & $\left \Vert A \right \Vert_p $ & $ A = \sqrt[p]{a_1^p + a_2^p + .. a_n^p}$\\
+		$\infty$ & $\left \Vert A \right \Vert_{\infty} $ & $\max A$\\
+		\bottomrule
+	\end{tabular}
+	
+\end{table}
+
+Your task is to build a generic program that can compute arbitrary norms, for arbitrary vector sizes. That is, given a vector with any dimension, you can compute its p-norm. Whatever that $p$ is. You will be given a starter code for this problem.
+\cleardoublepage
+\begin{minted}{octave}
+function l = p_norm(A, p)
+# This function computes the p-norm of a vector.
+# A is a vector.
+# p is the length of the norm, cf. to the previous section.
+
+your code goes here...
+\end{minted}
+
+\section{Theoretical Problems}
+Your task for this problem is to just read from a file, and write (or append) to a file. The code for this problem can be found on here \href{.run:./programming_problem_2.pdf}{here}. The *.m file can also be found \href{.run:./programming_problem_2.m}{here}.
+
+\subsection{Problem 3}
+What are the differences between Newton's gravitation theory, and the \textit{field} theory. This is not a short answer class of problems. You need to discuss each theory individually, and compare them showing their pros and cons. Please do not forget to write your references.
+
+\subsection{Problem 4}
+Derive the potential of a point mass, and prove that the potential of a spherical shell is the same as the potential of a point mass. Also show what that can mean in physical geodesy. (This problem has three tasks! Read the question well, it is too often you loose marks just because you did not read the question very well)
+\\
+Remember in the spherical shell case we have to take the integral of the mass. Because, in the point case, it was just a point. The mass is constant. If you still could not figure out these concepts, please come to me during office hours. The learning curve for this course is quite steep, but if you work a little bit harder, you will get earlier to that "ahaa" moment.
+
+\subsection{Credit Problem}
+This problem is not graded! Solve it for your own benefit.
+
+Derive the potential of a solid body. It is really simple, having solved the potential of a spherical shell.
+
+
+\section{Collaboration}
+As we have said in the section, you are highly encouraged to work together, but you have to make sure that \textit{all} of your submission is yours! We have very strict collaboration policy, so please make sure that you anything your submit is yours, and whenever you used someone's work you clearly indicate that (by citing them).\\
+Another important thing, whenever you have collaborated with someone, please write down their names. Having done will save you from getting zero marks. There is no penalty of writing the names of people you have worked with them--they won't also get any credit for that--it's just for us to know that you have worked together. Again, working together does \textit{not} mean giving someone's your code!\\
+Another thing, we need to know the hours you have spent on working with each assignment, so that we can know exactly if it is too much (or too little!). Please provide correct answers, I mean we will give you any extra credits if you solve your assignment in one hour! It is just for us to make sure that we are not giving you too much.
+\\
+
+\textbf{I've collaborated with:} ................\\
+\textbf{Approximate hours for this assignment}:......... hours
+
+
+ 
+
+\end{document}
