@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{hyperref} % For links hyper reference?
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{graphicx} % It used for working with graphics. It helps you to include png images into your LaTeX.
+\usepackage{minted} % It is used for syntax highlighting, it is bit harder than listings package, you need to have python installed in your system, and you also need to install pygments. If it doesn't work for you try and replace it with listings package.
+%\usepackage{listings}
+\graphicspath{./Figures} % We are adding the figure's path to our path so that we don't need to write Figure/figure_name.ext in our figure? Does that make sense to you?
+
+\usepackage{sectsty} % Allows customizing section commands
+
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+\usepackage{booktabs} % It allows to use books tables. A cool tables
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{University of Khartoum, Engineering} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Assignment 5 \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Mohamed Yousif} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section*{Notes}
+It is just about Legendre. It should be fairly easy. Submit on time, and do not cheat!
+
+
+
+\section{Practical Problems}
+These problems are designed to make you familiar with Legendre and the solution of Laplace's in spherical case.
+\paragraph{Problem 1 (3 marks).}Compute the first 5 degrees of Legendre. Assume that $m$ is zero. The equation for your solution is this
+\begin{equation}
+\label{eqn:special-laplace}
+P_{n}(t) = -\frac{(n - 1)}{n}P_{n-2}(t) + \frac{2n - 1}{n}t P_{n - 1} (t),
+\end{equation}
+
+Notice that, in the section I have not included the minus sign in the first term in rhs.
+
+\section{Programming Problems}
+For the assignment problems you will be given a starter code (legendre\_polynomials.m, legendre\_full.m). Use them to help you solve this problem.
+\paragraph{Problem 2 (3 Marks).}Write a program that solves the Legendre function recursively. Use the previous equation \eqref{eqn:special-laplace}. ONLY implement this algorithm!
+
+\paragraph{Problem 3, (4 Marks).}Write a general program that solves Legendre function for $m,n$. Use this equation
+\begin{equation}
+P_{(n,m)}(t) = -\frac{(n + m - 1)}{n-m}P_{(n-2,m)}(t) + \frac{2n - 1}{n-m}t P_{(n - 1,m)} (t),
+\end{equation}
+Where $m \le n$.\\
+What is different is this $m$ term. For each degree $n$, you need to compute it $m$ times.
+
+\section{Collaboration}
+As we have said in the section, you are highly encouraged to work together, but you have to make sure that \textit{all} of your submission is yours! We have very strict collaboration policy, so please make sure that you anything your submit is yours, and whenever you used someone's work you clearly indicate that (by citing them).\\
+Another important thing, whenever you have collaborated with someone, please write down their names. Having done will save you from getting zero marks. There is no penalty of writing the names of people you have worked with them--they won't also get any credit for that--it's just for us to know that you have worked together. Again, working together does \textit{not} mean giving someone's your code!\\
+Another thing, we need to know the hours you have spent on working with each assignment, so that we can know exactly if it is too much (or too little!). Please provide correct answers, I mean we will give you any extra credits if you solve your assignment in one hour! It is just for us to make sure that we are not giving you too much.
+\\
+
+\textbf{I've collaborated with:} ................\\
+\textbf{Approximate hours for this assignment}:......... hours
+
+
+ 
+
+\end{document}
